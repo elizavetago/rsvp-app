@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elizaveta & Maksim — Свадьба</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <div class="bg-lines"></div>
+
+  <main class="container">
+
+    <header class="hero">
+      <div class="hero__names">
+        <h1>Elizaveta</h1>
+        <div class="and">&</div>
+        <h1>Maksim</h1>
+      </div>
+
+      <p class="hero__subtitle">
+        Мы решили собрать своих и отпраздновать нашу свадьбу.
+        Будем очень рады, если вы сможете разделить с нами этот день.
+      </p>
+
+      <div class="hero__info">
+        <div class="info-card">
+          <div class="info-title">Дата</div>
+          <div class="info-value">24.06.2026</div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-title">Локация</div>
+          <div class="info-value">Tuscany, Italy</div>
+        </div>
+      </div>
+
+      <p class="hero__note">
+        Место и точное время сообщим ближе к дате.
+      </p>
+    </header>
+
+
+    <section class="section">
+      <h2>Анкета гостя</h2>
+      <p class="section__desc">
+        Пожалуйста, заполните форму — это поможет нам организовать логистику, трансфер и меню.
+      </p>
+
+      <form id="guestForm" class="form">
+
+        <div class="form-row">
+          <label>Имя и фамилия *</label>
+          <input type="text" name="fullName" required placeholder="Например: Анна Иванова"/>
+        </div>
+
+        <div class="form-row">
+          <label>Как планируете добираться? *</label>
+          <select name="transport" required>
+            <option value="">Выберите</option>
+            <option value="Трансфер">Трансфер</option>
+            <option value="Своя машина">Своя машина</option>
+            <option value="Пока не знаю">Пока не знаю</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>Нужен ли обратный трансфер? *</label>
+          <select name="returnTransfer" required>
+            <option value="">Выберите</option>
+            <option value="Да">Да</option>
+            <option value="Нет">Нет</option>
+            <option value="Пока не знаю">Пока не знаю</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>Предпочтения по алкоголю *</label>
+          <select name="alcohol" required>
+            <option value="">Выберите</option>
+            <option value="Красное вино">Красное вино</option>
+            <option value="Белое вино">Белое вино</option>
+            <option value="Просекко">Просекко</option>
+            <option value="Крепкий алкоголь">Крепкий алкоголь</option>
+            <option value="Не пью алкоголь">Не пью алкоголь</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>Предпочтения по еде *</label>
+          <select name="food" required>
+            <option value="">Выберите</option>
+            <option value="Мясо">Мясо</option>
+            <option value="Рыба">Рыба</option>
+            <option value="Вегетарианское">Вегетарианское</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>Ограничения по еде или аллергии *</label>
+          <select name="allergyFlag" required id="allergyFlag">
+            <option value="">Выберите</option>
+            <option value="Нет">Нет</option>
+            <option value="Да">Да (укажите какие)</option>
+          </select>
+        </div>
+
+        <div class="form-row hidden" id="allergyTextRow">
+          <label>Укажите ограничения / аллергии</label>
+          <input type="text" name="allergyText" placeholder="Например: орехи, лактоза..."/>
+        </div>
+
+        <div class="form-row">
+          <label>Контакт для связи (телефон / Telegram) *</label>
+          <input type="text" name="contact" required placeholder="+34 ... или @username"/>
+        </div>
+
+        <div class="form-row">
+          <label>Если есть плюс один — имя</label>
+          <input type="text" name="plusOneName" placeholder="Например: Иван"/>
+        </div>
+
+        <button class="btn" type="submit" id="submitBtn">
+          Отправить
+        </button>
+
+        <p class="form-status" id="formStatus"></p>
+
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__line"></div>
+      <p>Elizaveta & Maksim · 24.06.2026</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
